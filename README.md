@@ -1,2 +1,2 @@
 # UTSPBW
-ini adalah repositori untuk mengupload file web pbw saya
+ini adalah repositori untuk mengupload file uas web pbw saya
