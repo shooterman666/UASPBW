@@ -159,13 +159,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
                 <a href="#"
                    class="rounded-xl border border-slate-800 bg-slate-950/30 hover:bg-slate-950/50 p-5 transition-colors">
                     <p class="font-semibold">Kelola User</p>
-                    <p class="text-slate-400 text-sm mt-1">Placeholder (bisa jadi fitur admin).</p>
+                    <p class="text-slate-400 text-sm mt-1">Placeholder (ntah mau isi apa).</p>
                 </a>
 
                 <a href="#"
                    class="rounded-xl border border-slate-800 bg-slate-950/30 hover:bg-slate-950/50 p-5 transition-colors">
                     <p class="font-semibold">Riwayat Login</p>
-                    <p class="text-slate-400 text-sm mt-1">Placeholder (nilai plus kalau dibuat).</p>
+                    <p class="text-slate-400 text-sm mt-1">Placeholder (ntah mau isi apa).</p>
                 </a>
 
                 <a href="auth/logout.php"
