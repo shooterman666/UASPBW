@@ -1,3 +1,8 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']);
+$userName = $_SESSION['user_name'] ?? null;
+?>
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
@@ -14,7 +19,7 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="antiasa">
+<body class="antialiased">
 
     <header class="sticky top-0 z-50 w-full bg-slate-900 border-b border-slate-700">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,6 +35,24 @@
                     <a href="#technology" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Teknologi</a>
                     <a href="#strategy" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Strategi Ekspor</a>
                     <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">Permintaan Info</a>
+                    <?php if ($isLoggedIn): ?>
+                        <span class="text-gray-300 text-sm">
+                            Halo, <?= htmlspecialchars($userName) ?>
+                        </span>
+                        <a href="dashboard.php"
+                           class="bg-slate-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-600 transition-colors">
+                            Dashboard
+                        </a>
+                        <a href="auth/logout.php"
+                           class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors">
+                            Logout
+                        </a>
+                    <?php else: ?>
+                        <a href="auth/login.php"
+                           class="bg-slate-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-600 transition-colors">
+                            Login
+                        </a>
+                    <?php endif; ?>
                 </div>
                 
                 <div class="md:hidden">
@@ -288,7 +311,6 @@
         </div>
     </footer>
 
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
